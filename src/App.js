@@ -6,11 +6,13 @@ import Layout from "./Component/Layout/Layout";
 const App = () => {
   return (
     <div>
+      <div>
       <BrowserRouter>
       <LayoutProvider>
         <Layout/>
       </LayoutProvider>
       </BrowserRouter>
+    </div>
     </div>
   );
 }
