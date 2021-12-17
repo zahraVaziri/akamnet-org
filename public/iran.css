@@ -1,0 +1,17 @@
+
+  @font-face {
+       font-family:'iran yekan' ;
+       font-weight: normal;
+       font-style: normal;
+       src: url('./fonts/eot/iranyekanwebregularfanum.eot');
+       src: url('./fonts/woff/iranyekanwebregularfanum.woff') format('woff');
+       src: url('./fonts/ttf/iranyekanwebregularfanum.ttf') format('truetype');
+
+  }
+  
+    @font-face {
+       font-family: 'dima';
+       font-weight: normal;
+       font-style: normal;
+       src: url('./fonts/dima/Dima-Sogand-New.ttf') format('truetype');
+  }
