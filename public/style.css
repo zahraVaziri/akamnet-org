@@ -732,6 +732,7 @@ button{
 
 .how-akam{
     position: relative;
+    z-index: 88;
 }
 .card-how .row{
     position: relative;

@@ -244,11 +244,15 @@ useEffect(() => {
     const circleOne = document.getElementById('circleOne');
     const circleTwo = document.getElementById('circleTwo');
     const circleThree = document.getElementById('circleThree');
-    const circleFour = document.getElementById('circleFFour');
-    let service = document.getElementById('service')
-    // let serviceWidth = service.offsetWidth;
-    // let serviceHeight = service.offsetHeight;
-    // let backMove = 100;
+    const circleFour = document.getElementById('circleFour');
+    const circleFive = document.getElementById('circleFive');
+    const circleSix = document.getElementById('circleSix');
+    const circleSeven = document.getElementById('circleSeven');
+    const semi1 = document.getElementById('semi1');
+     const semi2 = document.getElementById('semi2');
+    let service = document.getElementById('service');
+    let how = document.getElementById('how');
+    let project = document.getElementById('project');
 
 
     if(service){
@@ -257,7 +261,17 @@ useEffect(() => {
       })
     }
     
+    if(how){
+      how.addEventListener('mousemove' , (event)=>{
+        mousemoventHow(event)
+      })
+    }
 
+    if(project){
+      project.addEventListener('mousemove' , (event)=>{
+        mousemoventPro(event)
+      })
+    }
 
     function mousemovent(event){
       console.log(event)
@@ -268,6 +282,26 @@ useEffect(() => {
       if(circleTwo) circleTwo.style.transform =`translate(${moveX}px ,${moveY}px )`;
       if(circleThree) circleThree.style.transform =`translate(${moveX}px ,${moveY}px )`;
       if(circleFour) circleFour.style.transform =`translate(${moveX}px ,${moveY}px )`;
+    }
+
+     function mousemoventHow(event){
+      console.log(event)
+      let moveX=Math.floor(-(event.offsetX - (how.offsetWidth / 2)) * (10 / how.offsetWidth));
+      let moveY=Math.floor(-(event.offsetY - (how.offsetHeight / 2)) * (10 / how.offsetHeight));
+   
+      if(circleFive) circleFive.style.transform =`translate(${moveX}px ,${moveY}px )`;
+      
+    }
+    function mousemoventPro(event){
+      console.log(event)
+      let moveX=Math.floor(-(event.offsetX - (project.offsetWidth / 2)) * (10 / project.offsetWidth));
+      let moveY=Math.floor(-(event.offsetY - (project.offsetHeight / 2)) * (10 / project.offsetHeight));
+   
+      if(circleSix) circleSix.style.transform =`translate(${moveX}px ,${moveY}px )`;
+      if(circleSeven) circleSeven.style.transform =`translate(${moveX}px ,${moveY}px )`;
+       if(semi1) semi1.style.transform =`translate(0px ,${moveY}px)`;
+        if(semi2) semi2.style.transform =`translate(0px ,${moveY}px)`;
+      
     }
 },[])
 
@@ -361,8 +395,7 @@ useEffect(() => {
       </div>
       <div className='how-akam pt-5' id='how'>
         <div className="container pt-4 container-title1">
-          {/* <div className='circle1'></div> */}
-          <div className='circle5'></div>
+          <div className='circle5' id='circleFive'></div>
           <div className="row">
             <div className="col-12">
               <h3 className='font-titles' data-aos="fade-down" data-aos-delay="9000" data-aos-duration="2000">آکام چگونه کار می کند</h3>
@@ -389,11 +422,11 @@ useEffect(() => {
           </div> 
         </div>
       </div>
-      <div style={{position: 'relative',zIndex: 8 ,paddingTop:'3rem'}} id='project'>
-        {/* <div className='semi-circle1'></div> */}
-        <div className='semi-circle2'></div>
-         <div className='circle6'></div>
-          <div className='circle7'></div>
+      <div style={{position: 'relative',zIndex: 88 ,paddingTop:'3rem'}} id='project'>
+        <div className='semi-circle1' id='semi1'></div>
+        <div className='semi-circle2' id='semi2'></div>
+         <div className='circle6' id='circleSix'></div>
+          <div className='circle7' id='circleSeven'></div>
 
         <div className="container pt-3 container-title1">
          
